@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery — Ilia Maksimov Tattoo Artist</title>
+    <link rel="icon" type="image/png" href="image/icon/icon_site.png">
+    <link rel="apple-touch-icon" href="image/icon/icon_site.png">
+    <meta property="og:title" content="Gallery — Ilia Maksimov Tattoo Artist">
+    <meta property="og:image" content="image/icon/icon_site.png">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -543,7 +548,7 @@
             .page-header { padding: 120px 20px 48px; flex-direction: column; align-items: flex-start; gap: 20px; }
             .filter-inner { padding: 0 20px; }
             .gallery-wrap { padding: 32px 20px 72px; }
-            .gallery-grid { columns: 1; }
+            .gallery-grid { columns: 2; column-gap: 10px; }
             .lb-prev { left: -10px; }
             .lb-next { right: -10px; }
             .fav-drawer { width: 100vw; }
@@ -825,7 +830,7 @@ const CAT_LABELS = {portrait:'Portrait',realism:'Realism',chicano:'Chicano',cove
     } else {
       const mainSrc = item.type === 'multi' ? item.photos[0] : item.src;
       const fname = mainSrc.split('/').pop();
-      ph = `<div class="ph" style="aspect-ratio:${item.ratio}"><img src="${mainSrc}" alt="${item.title}" onload="this.classList.add('loaded')"><span class="ph-label">${fname}</span></div>`;
+      ph = `<div class="ph" style="aspect-ratio:${item.ratio}"><img src="${mainSrc}" alt="${item.title}" loading="lazy" onload="this.classList.add('loaded')"><span class="ph-label">${fname}</span></div>`;
     }
     el.innerHTML = `<div class="gi-img">${ph}<div class="gi-overlay"><div class="gi-style">${label}</div><div class="gi-title">${item.title}</div></div></div>`;
     grid.appendChild(el);
