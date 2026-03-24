@@ -114,6 +114,29 @@
     .btn-accent { background: var(--accent); color: #161616; font-weight: 600; }
     .btn-accent:hover { background: white; }
 
+    /* ===== VIEW MORE — pulse glow ===== */
+    .btn-pulse {
+        position: relative;
+        box-shadow: 0 0 0 0 rgba(0,201,167,.55);
+        animation: btnPulse 2.2s ease-out infinite;
+    }
+    .btn-pulse::after {
+        content: '';
+        position: absolute; inset: 0;
+        background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%);
+        background-size: 200% 100%;
+        animation: btnShimmer 2.2s ease-in-out infinite;
+    }
+    @keyframes btnPulse {
+        0%   { box-shadow: 0 0 0 0 rgba(0,201,167,.6); }
+        60%  { box-shadow: 0 0 0 14px rgba(0,201,167,0); }
+        100% { box-shadow: 0 0 0 0 rgba(0,201,167,0); }
+    }
+    @keyframes btnShimmer {
+        0%   { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+    }
+
     /* ===================== NAVBAR ===================== */
     #navbar {
         position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -577,7 +600,7 @@
         </div>
     </div>
     <div class="port-foot fu d2">
-        <a href="gallery.html" class="btn btn-accent mag"><span data-i18n="port.more">View More Tattoos</span></a>
+        <a href="gallery.html" class="btn btn-accent mag btn-pulse"><span data-i18n="port.more">View More Tattoos</span></a>
     </div>
 </section>
 
