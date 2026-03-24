@@ -188,6 +188,9 @@
     .hero-photo-2 { width: 268px; height: 360px; right: 60px; top: 40px; box-shadow: 20px 20px 60px rgba(0,0,0,.7); }
     .hero-hl { position: relative; z-index: 2; text-align: center; padding: 0 20px; }
     .hero-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(68px,10.5vw,148px); line-height: .93; letter-spacing: .025em; }
+    [data-lang="ru"] .hero-h1,
+    [data-lang="vi"] .hero-h1,
+    [data-lang="tr"] .hero-h1 { font-size: clamp(44px,7vw,108px); }
     .hero-h1 .dim { color: rgba(255,255,255,.42); }
     .hero-cta { margin-top: 40px; }
 
@@ -204,6 +207,7 @@
 
     /* ===================== TICKER ===================== */
     .ticker-wrap { overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: rgba(0,0,0,.18); }
+    .ticker-1 { margin-top: 70px; }
     .ticker-track { display: flex; width: max-content; padding: 15px 0; animation: tick 28s linear infinite; }
     .ticker-track.rev { animation-direction: reverse; }
     .ticker-item { display: flex; align-items: center; gap: 18px; padding: 0 18px; font-size: 9.5px; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
@@ -421,7 +425,7 @@
         #navbar { padding: 16px 20px; }
         .nav-left, .nav-right { display: none; }
         .mob-lang-bar { display: flex; }
-        .hamburger { display: flex; }
+        .hamburger { display: flex; margin-left: 16px; }
         .sec { padding: 72px 20px; }
         #contact { padding: 72px 20px; }
         #countries { padding: 72px 20px; }
@@ -544,7 +548,7 @@
 </section>
 
 <!-- TICKER 1 -->
-<div class="ticker-wrap" style="margin-top:70px">
+<div class="ticker-wrap ticker-1">
     <div class="ticker-track" id="t1"></div>
 </div>
 
@@ -608,9 +612,9 @@
 <div id="stats">
     <div class="stats-grid">
         <div class="stat-item"><div class="stat-num" data-target="7"><span class="num">0</span><span class="plus">+</span></div><div class="stat-lbl" data-i18n="stats.years">Years of Practice</div></div>
-        <div class="stat-item"><div class="stat-num" data-target="500"><span class="num">0</span><span class="plus">+</span></div><div class="stat-lbl" data-i18n="stats.works">Works Done</div></div>
-        <div class="stat-item"><div class="stat-num" data-target="3"><span class="num">0</span></div><div class="stat-lbl" data-i18n="stats.countries">Countries</div></div>
-        <div class="stat-item"><div class="stat-num" data-target="300"><span class="num">0</span><span class="plus">+</span></div><div class="stat-lbl" data-i18n="stats.clients">Happy Clients</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="5000"><span class="num">0</span><span class="plus">+</span></div><div class="stat-lbl" data-i18n="stats.works">Works Done</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="4"><span class="num">0</span></div><div class="stat-lbl" data-i18n="stats.countries">Countries</div></div>
+        <div class="stat-item"><div class="stat-num" data-target="1000"><span class="num">0</span><span class="plus">+</span></div><div class="stat-lbl" data-i18n="stats.clients">Happy Clients</div></div>
     </div>
 </div>
 
