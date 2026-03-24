@@ -835,6 +835,11 @@ const CAT_LABELS = {portrait:'Portrait',realism:'Realism',chicano:'Chicano',cove
 /* ===== ITEMS LIST (populated right after render) ===== */
 const items = Array.from(document.querySelectorAll('.gallery-item'));
 
+/* ===== LIGHTBOX STATE (declared early to avoid TDZ errors) ===== */
+let lbItems = [];
+let lbIndex = 0;
+let lbCurrentId = null;
+
 /* ===== CURSOR ===== */
 const cursor = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursorRing');
@@ -1066,9 +1071,6 @@ if (CATEGORIES.includes(hash)) applyFilter(hash);
 if (new URLSearchParams(location.search).get('favs')) setTimeout(favOpen, 300);
 
 /* ===== LIGHTBOX ===== */
-let lbItems = [];
-let lbIndex = 0;
-let lbCurrentId = null;
 
 items.forEach(item => {
     item.addEventListener('click', e => {
