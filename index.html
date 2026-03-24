@@ -1285,18 +1285,49 @@ function formSubmit(e) {
     const name = document.getElementById('fi-name').value;
     const cont = document.getElementById('fi-contact').value;
     const msg  = document.getElementById('fi-msg').value;
-    const sent = { en:'Sent ✓ — redirecting…', ru:'Отправлено ✓ — переход…', vi:'Đã gửi ✓ — đang chuyển…', tr:'Gönderildi ✓ — yönlendiriliyor…' };
-    btn.textContent = sent[currentLang] || sent.en;
-    btn.style.background = '#fff';
-    // Open mail client with prefilled content
-    const subject = encodeURIComponent('Tattoo inquiry from ' + name);
-    const body    = encodeURIComponent('Name: ' + name + '\nContact: ' + cont + '\n\n' + msg);
-    setTimeout(() => {
-        window.location.href = 'mailto:moleosc@gmail.com?subject=' + subject + '&body=' + body;
-        btn.textContent = T[currentLang]['ct.send'];
-        btn.style.background = '';
-        e.target.reset();
-    }, 1200);
+
+    const sending = { en:'Sending…', ru:'Отправка…', vi:'Đang gửi…', tr:'Gönderiliyor…' };
+    const success = { en:'Sent ✓', ru:'Отправлено ✓', vi:'Đã gửi ✓', tr:'Gönderildi ✓' };
+    const error   = { en:'Error — try again', ru:'Ошибка — попробуй снова', vi:'Lỗi — thử lại', tr:'Hata — tekrar dene' };
+
+    btn.textContent = sending[currentLang] || sending.en;
+    btn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+            access_key: '74c42bd9-62ef-4ce7-bacc-dde620e60501',
+            subject: 'Tattoo inquiry from ' + name,
+            name,
+            contact: cont,
+            message: msg,
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data.success) {
+            btn.textContent = success[currentLang] || success.en;
+            btn.style.background = 'var(--accent)';
+            e.target.reset();
+            setTimeout(() => {
+                btn.textContent = T[currentLang]['ct.send'];
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 3000);
+        } else {
+            throw new Error();
+        }
+    })
+    .catch(() => {
+        btn.textContent = error[currentLang] || error.en;
+        btn.style.background = '#c0392b';
+        btn.disabled = false;
+        setTimeout(() => {
+            btn.textContent = T[currentLang]['ct.send'];
+            btn.style.background = '';
+        }, 3000);
+    });
 }
 
 /* ══════════════════════════════════════
