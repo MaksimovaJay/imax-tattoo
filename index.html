@@ -1054,10 +1054,18 @@ function setLang(lang, source) {
    PRELOADER
 ══════════════════════════════════════ */
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('preloader').classList.add('out');
-        setTimeout(() => document.getElementById('preloader').remove(), 800);
-    }, 1400);
+    const pl = document.getElementById('preloader');
+    const navType = performance.getEntriesByType('navigation')[0]?.type;
+    // Skip preloader on back/forward navigation or reload within session
+    if (navType === 'back_forward' || sessionStorage.getItem('visited')) {
+        pl.remove();
+    } else {
+        sessionStorage.setItem('visited', '1');
+        setTimeout(() => {
+            pl.classList.add('out');
+            setTimeout(() => pl.remove(), 800);
+        }, 1400);
+    }
 });
 
 /* ══════════════════════════════════════
