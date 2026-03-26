@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery — Ilia Maksimov Tattoo Artist</title>
+    <title>Tattoo Gallery — Ilia Maksimov | Realism, Chicano, Portrait</title>
+    <meta name="description" content="Browse the full tattoo portfolio of Ilia Maksimov — realism, chicano, portrait, color, cover-up, and graphic tattoos.">
+    <meta name="keywords" content="tattoo gallery, realism tattoo portfolio, chicano tattoo, portrait tattoo artist, Ilia Maksimov gallery">
+    <link rel="canonical" href="https://maksimovajay.github.io/imax-tattoo/gallery.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18039875830"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18039875830');
+    </script>
     <link rel="icon" type="image/png" href="image/icon/icon_site.png">
     <link rel="apple-touch-icon" href="image/icon/icon_site.png">
-    <meta property="og:title" content="Gallery — Ilia Maksimov Tattoo Artist">
-    <meta property="og:image" content="image/icon/icon_site.png">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maksimovajay.github.io/imax-tattoo/gallery.html">
+    <meta property="og:title" content="Tattoo Gallery — Ilia Maksimov">
+    <meta property="og:description" content="Full portfolio — realism, chicano, portrait, color, cover-up, and graphic tattoos.">
+    <meta property="og:image" content="https://maksimovajay.github.io/imax-tattoo/image/portfolio/realism/realism-3.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tattoo Gallery — Ilia Maksimov">
+    <meta name="twitter:image" content="https://maksimovajay.github.io/imax-tattoo/image/portfolio/realism/realism-3.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -726,7 +742,7 @@
             </svg>
         </a>
     </div>
-    <div class="foot-copy">© 2024 Ilia Maksimov. All rights reserved.</div>
+    <div class="foot-copy">© 2026 Ilia Maksimov. All rights reserved.</div>
 </footer>
 
 <script>
@@ -830,7 +846,7 @@ const CAT_LABELS = {portrait:'Portrait',realism:'Realism',chicano:'Chicano',cove
     } else {
       const mainSrc = item.type === 'multi' ? item.photos[0] : item.src;
       const fname = mainSrc.split('/').pop();
-      ph = `<div class="ph" style="aspect-ratio:${item.ratio}"><img src="${mainSrc}" alt="${item.title}" loading="lazy" onload="this.classList.add('loaded')"><span class="ph-label">${fname}</span></div>`;
+      ph = `<div class="ph" style="aspect-ratio:${item.ratio}"><img src="${mainSrc}" alt="${label} tattoo — ${item.title} by Ilia Maksimov" loading="lazy" onload="this.classList.add('loaded')"><span class="ph-label">${fname}</span></div>`;
     }
     el.innerHTML = `<div class="gi-img">${ph}<div class="gi-overlay"><div class="gi-style">${label}</div><div class="gi-title">${item.title}</div></div></div>`;
     grid.appendChild(el);

@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilia Maksimov — Tattoo Artist</title>
-    <meta name="description" content="Tattoo artist specializing in realism, portrait, chicano, and custom work. Based worldwide.">
+    <title>Ilia Maksimov — Tattoo Artist | Realism, Chicano, Portrait</title>
+    <meta name="description" content="Ilia Maksimov — tattoo artist specializing in realism, portrait, chicano, and custom tattoos. Based in Kyrgyzstan, Turkey, Vietnam. Book your appointment.">
+    <meta name="keywords" content="tattoo artist, realism tattoo, chicano tattoo, portrait tattoo, cover-up tattoo, Bishkek tattoo, Kyrgyzstan tattoo, Ilia Maksimov, imax tattoo">
+    <link rel="canonical" href="https://maksimovajay.github.io/imax-tattoo/">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18039875830"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18039875830');
+    </script>
     <link rel="icon" type="image/png" href="image/icon/icon_site.png">
     <link rel="apple-touch-icon" href="image/icon/icon_site.png">
-    <meta property="og:title" content="Ilia Maksimov — Tattoo Artist">
-    <meta property="og:description" content="Realism, portrait, chicano, cover-up and graphic tattoos. Based in Kyrgyzstan, Turkey, Vietnam.">
-    <meta property="og:image" content="image/icon/icon_site.png">
+    <!-- Open Graph / Facebook / Instagram -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maksimovajay.github.io/imax-tattoo/">
+    <meta property="og:title" content="Ilia Maksimov — Tattoo Artist | Realism, Chicano, Portrait">
+    <meta property="og:description" content="Custom tattoos with intention — realism, portrait, chicano, cover-up. Based in Kyrgyzstan, Turkey, Vietnam.">
+    <meta property="og:image" content="https://maksimovajay.github.io/imax-tattoo/image/portfolio/chicano/chicano-8.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="1000">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ilia Maksimov — Tattoo Artist">
+    <meta name="twitter:description" content="Custom tattoos with intention — realism, portrait, chicano, cover-up.">
+    <meta name="twitter:image" content="https://maksimovajay.github.io/imax-tattoo/image/portfolio/chicano/chicano-8.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
@@ -270,7 +290,17 @@
     .port-nav-row { display: flex; gap: 10px; margin-top: 16px; }
     .port-nav-btn { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.15); background: transparent; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .3s; }
     .port-nav-btn:hover { background: var(--accent); border-color: var(--accent); color: #161616; }
-    .port-foot { display: flex; justify-content: center; margin-top: 56px; position: relative; z-index: 1; }
+    .port-foot { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 56px; position: relative; z-index: 1; }
+
+    /* VIDEO STRIP */
+    .vid-strip { margin-top: 48px; text-align: center; position: relative; z-index: 1; }
+    .vid-strip-label { font-size: 10px; letter-spacing: .4em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+    .vid-strip-row { display: flex; gap: 12px; justify-content: center; margin-bottom: 28px; }
+    .vid-card { position: relative; width: 150px; aspect-ratio: 9/16; overflow: hidden; background: var(--bg-card); flex-shrink: 0; }
+    .vid-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .vid-card-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.4); transition: opacity .3s; }
+    .vid-card:hover .vid-card-overlay { opacity: 0; }
+    .vid-play-icon { width: 38px; height: 38px; border: 1.5px solid rgba(255,255,255,.65); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
     /* ===================== ABOUT ===================== */
     #about { position: relative; overflow: hidden; }
@@ -580,10 +610,10 @@
         <div class="hero-eye fu" data-i18n="hero.eye">Stories on Skin</div>
         <div class="hero-photos">
             <div class="hero-photo hero-photo-1 fi" id="hp1">
-                <div class="ph"><img src="image/portfolio/chicano/chicano-1.jpg" alt="Tattoo" onload="this.classList.add('loaded')"><span class="ph-label">chicano-1.jpg</span></div>
+                <div class="ph"><img src="image/portfolio/chicano/chicano-1.jpg" alt="Chicano tattoo by Ilia Maksimov" onload="this.classList.add('loaded')"><span class="ph-label">chicano-1.jpg</span></div>
             </div>
             <div class="hero-photo hero-photo-2 fi d1" id="hp2">
-                <div class="ph"><img src="image/portfolio/realism/realism-3.jpg" alt="Tattoo" onload="this.classList.add('loaded')"><span class="ph-label">realism-3.jpg</span></div>
+                <div class="ph"><img src="image/portfolio/realism/realism-3.jpg" alt="Realism portrait tattoo by Ilia Maksimov" onload="this.classList.add('loaded')"><span class="ph-label">realism-3.jpg</span></div>
             </div>
         </div>
         <div class="hero-hl fu d2">
@@ -610,23 +640,41 @@
     </div>
     <div class="port-grid fu d1">
         <div class="port-card">
-            <div class="port-img ph"><img src="image/portfolio/chicano/chicano-4.jpg" alt="" onload="this.classList.add('loaded')"><span class="ph-label">chicano-4.jpg</span></div>
+            <div class="port-img ph"><img src="image/portfolio/chicano/chicano-4.jpg" alt="Chicano tattoo artwork by Ilia Maksimov" onload="this.classList.add('loaded')"><span class="ph-label">chicano-4.jpg</span></div>
         </div>
         <div class="port-center">
             <div class="port-counter">1 / 12</div>
             <div class="port-card">
-                <div class="port-img-tall ph"><img src="image/portfolio/chicano/chicano-8.jpg" alt="" onload="this.classList.add('loaded')"><span class="ph-label">chicano-8.jpg</span></div>
+                <div class="port-img-tall ph"><img src="image/portfolio/chicano/chicano-8.jpg" alt="Chicano sleeve tattoo by Ilia Maksimov" onload="this.classList.add('loaded')"><span class="ph-label">chicano-8.jpg</span></div>
             </div>
             <div class="port-qbox">
                 <p class="port-quote"><strong data-i18n="port.qstrong">A tattoo is not just an image</strong> — <span data-i18n="port.qrest">it is a moment, a memory, a decision. Each piece is created with intention, balance, and attention to detail, so it feels personal today and meaningful years from now.</span></p>
             </div>
         </div>
         <div class="port-card">
-            <div class="port-img ph"><img src="image/portfolio/color/color-4.JPG" alt="" onload="this.classList.add('loaded')"><span class="ph-label">color-4.JPG</span></div>
+            <div class="port-img ph"><img src="image/portfolio/color/color-4.JPG" alt="Color tattoo by Ilia Maksimov" onload="this.classList.add('loaded')"><span class="ph-label">color-4.JPG</span></div>
         </div>
     </div>
     <div class="port-foot fu d2">
         <a href="gallery.html" class="btn btn-accent mag btn-pulse"><span data-i18n="port.more">View More Tattoos</span></a>
+        <a href="videos.html" class="btn btn-outline mag"><span data-i18n="port.vid_more">Watch Videos</span></a>
+    </div>
+    <div class="vid-strip fu d3">
+        <div class="vid-strip-label" data-i18n="port.vid_label">Also on Video</div>
+        <div class="vid-strip-row">
+            <div class="vid-card">
+                <video src="video/video_imax_3.mp4" muted loop playsinline></video>
+                <div class="vid-card-overlay"><div class="vid-play-icon"><svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg></div></div>
+            </div>
+            <div class="vid-card">
+                <video src="video/video_imax_5.mp4" muted loop playsinline></video>
+                <div class="vid-card-overlay"><div class="vid-play-icon"><svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg></div></div>
+            </div>
+            <div class="vid-card">
+                <video src="video/video_imax_7.mp4" muted loop playsinline></video>
+                <div class="vid-card-overlay"><div class="vid-play-icon"><svg width="10" height="12" viewBox="0 0 10 12" fill="white"><path d="M0 0l10 6-10 6z"/></svg></div></div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -775,7 +823,7 @@
         <a class="fs" href="https://t.me/imaxtattoo" target="_blank" rel="noopener" title="Telegram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
         <a class="fs" href="https://wa.me/+996706777199" target="_blank" rel="noopener" title="WhatsApp"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
     </div>
-    <div class="foot-copy" data-i18n="foot.copy">© 2024 Ilia Maksimov. All rights reserved.</div>
+    <div class="foot-copy" data-i18n="foot.copy">© 2026 Ilia Maksimov. All rights reserved.</div>
 </footer>
 
 <!-- BACK TO TOP -->
@@ -801,6 +849,8 @@ en: {
   'port.qstrong': 'A tattoo is not just an image',
   'port.qrest':   'it is a moment, a memory, a decision. Each piece is created with intention, balance, and attention to detail, so it feels personal today and meaningful years from now.',
   'port.more':    'View More Tattoos',
+  'port.vid_label': 'Also on Video',
+  'port.vid_more':  'Watch Videos',
   'about.label':  'About the Artist', 'about.surname': 'Maksimov',
   'about.bio':    'I create tattoos that turn personal stories into timeless visual forms. Each piece is approached with intention, precision, and respect for the body.',
   'stats.years':  'Years of Practice', 'stats.works': 'Works Done',
@@ -824,7 +874,7 @@ en: {
   'faq.sub':      'Everything you need to know before your first appointment. Can\'t find an answer? Reach out directly.',
   'foot.sub':     'Tattoo Artist', 'foot.work': 'Work',
   'foot.about':   'About', 'foot.contact': 'Contact',
-  'foot.copy':    '© 2024 Ilia Maksimov. All rights reserved.',
+  'foot.copy':    '© 2026 Ilia Maksimov. All rights reserved.',
 },
 ru: {
   'pl.sub':       'Тату-мастер',
@@ -838,6 +888,8 @@ ru: {
   'port.qstrong': 'Татуировка — это не просто изображение',
   'port.qrest':   'это момент, воспоминание, решение. Каждая работа создаётся с намерением, балансом и вниманием к деталям — чтобы оставаться личной сегодня и значимой спустя годы.',
   'port.more':    'Смотреть все работы',
+  'port.vid_label': 'Видео-работы',
+  'port.vid_more':  'Смотреть видео',
   'about.label':  'Об артисте', 'about.surname': 'Максимов',
   'about.bio':    'Я создаю татуировки, которые превращают личные истории в вечные визуальные образы. Каждая работа — с намерением, точностью и уважением к телу.',
   'stats.years':  'Лет практики', 'stats.works': 'Работ выполнено',
@@ -861,7 +913,7 @@ ru: {
   'faq.sub':      'Всё, что нужно знать перед первым визитом. Не нашли ответ? Пишите напрямую.',
   'foot.sub':     'Тату-мастер', 'foot.work': 'Работы',
   'foot.about':   'Обо мне', 'foot.contact': 'Контакт',
-  'foot.copy':    '© 2024 Илья Максимов. Все права защищены.',
+  'foot.copy':    '© 2026 Илья Максимов. Все права защищены.',
 },
 vi: {
   'pl.sub':       'Nghệ sĩ xăm hình',
@@ -875,6 +927,8 @@ vi: {
   'port.qstrong': 'Hình xăm không chỉ là hình ảnh',
   'port.qrest':   'đó là khoảnh khắc, ký ức, quyết định. Mỗi tác phẩm được tạo ra với chủ tâm, cân bằng và chú ý đến từng chi tiết, để cảm thấy cá nhân hôm nay và có ý nghĩa trong những năm tới.',
   'port.more':    'Xem thêm tác phẩm',
+  'port.vid_label': 'Cũng có video',
+  'port.vid_more':  'Xem tất cả video',
   'about.label':  'Về nghệ sĩ', 'about.surname': 'Maksimov',
   'about.bio':    'Tôi tạo ra những hình xăm biến câu chuyện cá nhân thành hình thức thị giác vĩnh cửu. Mỗi tác phẩm được tiếp cận với chủ tâm, tỉ mỉ và tôn trọng cơ thể.',
   'stats.years':  'Năm kinh nghiệm', 'stats.works': 'Tác phẩm hoàn thành',
@@ -898,7 +952,7 @@ vi: {
   'faq.sub':      'Mọi thứ bạn cần biết trước cuộc hẹn đầu tiên. Không tìm thấy câu trả lời? Liên hệ trực tiếp.',
   'foot.sub':     'Nghệ sĩ xăm hình', 'foot.work': 'Tác phẩm',
   'foot.about':   'Về tôi', 'foot.contact': 'Liên hệ',
-  'foot.copy':    '© 2024 Ilia Maksimov. Bản quyền thuộc về.',
+  'foot.copy':    '© 2026 Ilia Maksimov. Bản quyền thuộc về.',
 },
 tr: {
   'pl.sub':       'Dövme Sanatçısı',
@@ -912,6 +966,8 @@ tr: {
   'port.qstrong': 'Bir dövme sadece bir görsel değildir',
   'port.qrest':   'bir an, bir anı, bir karardır. Her iş niyet, denge ve detaylara dikkat edilerek oluşturulur — bugün kişisel, yıllar sonra anlamlı hissettirmek için.',
   'port.more':    'Tüm Çalışmaları Gör',
+  'port.vid_label': 'Videoda da',
+  'port.vid_more':  'Tüm Videoları İzle',
   'about.label':  'Sanatçı Hakkında', 'about.surname': 'Maksimov',
   'about.bio':    'Kişisel hikayeleri zamansız görsel formlara dönüştüren dövmeler yapıyorum. Her işe niyet, hassasiyet ve bedene saygıyla yaklaşıyorum.',
   'stats.years':  'Yıllık Deneyim', 'stats.works': 'Tamamlanan İş',
@@ -935,7 +991,7 @@ tr: {
   'faq.sub':      'İlk randevunuzdan önce bilmeniz gereken her şey. Cevap bulamadınız mı? Doğrudan ulaşın.',
   'foot.sub':     'Dövme Sanatçısı', 'foot.work': 'Çalışmalar',
   'foot.about':   'Hakkımda', 'foot.contact': 'İletişim',
-  'foot.copy':    '© 2024 Ilia Maksimov. Tüm hakları saklıdır.',
+  'foot.copy':    '© 2026 Ilia Maksimov. Tüm hakları saklıdır.',
 }
 };
 
@@ -1203,6 +1259,13 @@ const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fu, .fi').forEach(el => obs.observe(el));
+
+/* VIDEO STRIP — play on hover, lazy src */
+document.querySelectorAll('.vid-card').forEach(card => {
+    const vid = card.querySelector('video');
+    card.addEventListener('mouseenter', () => vid.play());
+    card.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+});
 
 /* ══════════════════════════════════════
    STATS COUNTER
