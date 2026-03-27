@@ -165,7 +165,7 @@
 
     /* ===================== NAVBAR ===================== */
     #navbar {
-        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+        position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
         display: grid; grid-template-columns: 1fr auto 1fr;
         align-items: center; padding: 22px 48px;
         transition: background .4s, backdrop-filter .4s, border-color .4s;
@@ -185,6 +185,28 @@
     .nav-link:hover::after { width: 100%; }
     .logo { font-family: 'Bebas Neue', sans-serif; font-size: 46px; letter-spacing: .04em; line-height: 1; color: white; text-align: center; }
     .logo .a { color: var(--accent); }
+    .topbar {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+        height: 36px; display: flex; align-items: center; justify-content: center; gap: 10px;
+        background: rgba(0,201,167,.08); border-bottom: 1px solid rgba(0,201,167,.18);
+        backdrop-filter: blur(16px);
+        font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+        color: rgba(255,255,255,.7);
+    }
+    .topbar svg { flex-shrink: 0; }
+    .loc-pin-dot {
+        animation: loc-pulse 2s ease-in-out infinite;
+    }
+    @keyframes loc-pulse {
+        0%, 100% {
+            fill-opacity: 1;
+            filter: drop-shadow(0 0 4px rgba(0,201,167,.9));
+        }
+        50% {
+            fill-opacity: .3;
+            filter: drop-shadow(0 0 0px rgba(0,201,167,0));
+        }
+    }
     .nav-wishlist {
         display: flex; align-items: center; background: none; border: none;
         color: rgba(255,255,255,.55); cursor: pointer; position: relative;
@@ -225,7 +247,7 @@
     .mob-lang { display: flex; gap: 12px; margin-top: 8px; }
 
     /* ===================== HERO ===================== */
-    #hero { min-height: 100vh; overflow: hidden; display: flex; flex-direction: column; padding-top: 90px; position: relative; }
+    #hero { min-height: 100vh; overflow: hidden; display: flex; flex-direction: column; padding-top: 126px; position: relative; }
     .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
     .hero-video-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,22,22,.55) 0%, rgba(22,22,22,.25) 40%, rgba(22,22,22,.75) 100%); z-index: 1; }
     .hero-inner { max-width: 1320px; margin: 0 auto; width: 100%; padding: 30px 48px 0; display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; }
@@ -497,7 +519,9 @@
         .reviews-track .review-card { flex: 0 0 calc(50% - 10px); }
     }
     @media (max-width: 768px) {
-        #navbar { padding: 16px 20px; }
+        .topbar { height: 32px; font-size: 9px; letter-spacing: .18em; }
+        #navbar { padding: 16px 20px; top: 32px; }
+        #hero { padding-top: 110px; }
         .nav-left, .nav-right { display: none; }
         .mob-lang-bar { display: flex; }
         .hamburger { display: flex; margin-left: 16px; }
@@ -561,6 +585,15 @@
 </div>
 
 <!-- NAV -->
+<!-- TOPBAR -->
+<div class="topbar">
+    <svg width="11" height="15" viewBox="0 0 11 15" fill="none">
+        <path d="M5.5 0C2.46 0 0 2.46 0 5.5c0 3.85 5.5 9.5 5.5 9.5S11 9.35 11 5.5C11 2.46 8.54 0 5.5 0z" fill="rgba(255,255,255,.25)"/>
+        <circle class="loc-pin-dot" cx="5.5" cy="5.5" r="2.2" fill="var(--accent)"/>
+    </svg>
+    <span data-i18n="nav.location">Now in Nha Trang</span>
+</div>
+
 <nav id="navbar">
     <div class="nav-left">
         <a href="#hero"  class="nav-link" data-i18n="nav.home">Home</a>
@@ -841,6 +874,7 @@ en: {
   'pl.sub':       'Tattoo Artist',
   'nav.home':     'Home',  'nav.about':  'About Me',
   'nav.gallery':  'Gallery', 'nav.contact': 'Contact Me',
+  'nav.location': 'Now in Nha Trang',
   'hero.tag1':    'Turning personal\nstories into\ntimeless tattoos',
   'hero.tag2':    'Precision, meaning,\nand respect for\nevery piece',
   'hero.eye':     'Stories on Skin',
@@ -880,6 +914,7 @@ ru: {
   'pl.sub':       'Тату-мастер',
   'nav.home':     'Главная', 'nav.about': 'Обо мне',
   'nav.gallery':  'Галерея', 'nav.contact': 'Написать',
+  'nav.location': 'Сейчас в Нья Транге',
   'hero.tag1':    'Превращаю личные\nистории в\nвечные татуировки',
   'hero.tag2':    'Точность, смысл\nи уважение к\nкаждой работе',
   'hero.eye':     'Истории на коже',
@@ -919,6 +954,7 @@ vi: {
   'pl.sub':       'Nghệ sĩ xăm hình',
   'nav.home':     'Trang chủ', 'nav.about': 'Về tôi',
   'nav.gallery':  'Bộ sưu tập', 'nav.contact': 'Liên hệ',
+  'nav.location': 'Hiện tại ở Nha Trang',
   'hero.tag1':    'Biến câu chuyện\ncá nhân thành\nhình xăm bất hủ',
   'hero.tag2':    'Tỉ mỉ, ý nghĩa\nvà tôn trọng\ntừng tác phẩm',
   'hero.eye':     'Câu chuyện trên da',
@@ -958,6 +994,7 @@ tr: {
   'pl.sub':       'Dövme Sanatçısı',
   'nav.home':     'Ana Sayfa', 'nav.about': 'Hakkımda',
   'nav.gallery':  'Galeri', 'nav.contact': 'İletişim',
+  'nav.location': 'Şu an Nha Trang\'da',
   'hero.tag1':    'Kişisel hikayeleri\nzamansız dövmelere\ndönüştürüyorum',
   'hero.tag2':    'Hassasiyet, anlam\nve her işe\nsaygı',
   'hero.eye':     'Derindeki Hikayeler',
